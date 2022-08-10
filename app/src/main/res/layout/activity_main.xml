@@ -45,12 +45,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.5"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:background="@android:color/transparent"
-                android:gravity="center"
                 android:layout_marginLeft="5dp"
-                android:spinnerMode="dropdown" />
+                />
 
 
             <LinearLayout
@@ -93,7 +89,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint=" Enter Custom Die"
+            android:hint="Enter Custom Die"
             android:layout_marginLeft="15dp"
             android:layout_weight="0.7"
             android:textColorHint="@color/black"
@@ -101,19 +97,19 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edFirstName"
+                android:id="@+id/edCustomDiceSide"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text">
+                android:inputType="number">
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btSave"
+            android:id="@+id/btAdd"
             style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
-            android:text="Save"
+            android:text="Add"
             android:layout_marginLeft="15dp"
 
             android:layout_marginRight="15dp"
