@@ -1,8 +1,10 @@
 <resources>
-    <string name="app_name">DiceApp</string>
+    <string name="app_name">Dice Rolling</string>
     <string name="night_mode">Night Mode</string>
     <string name="roll_once">Roll Once</string>
     <string name="dice_one">Dice One</string>
     <string name="dice_two">Dice Two</string>
     <string name="history_of_dice">History of Dice:-</string>
+    <string name="dice_rolling">Dice Rolling</string>
+    <string name="powerd_by_rushabh_shah">Powerd By Rushabh Shah</string>
 </resources>

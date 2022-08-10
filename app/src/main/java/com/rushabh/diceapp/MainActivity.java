@@ -194,9 +194,7 @@ LinearLayout lvMain;
                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                    SharedPrefManager.putInt("NightMode", 0);
                    Toast.makeText(MainActivity.this, "Night Mode Off", Toast.LENGTH_SHORT).show();
-
                }return true;
-
         } return super.onOptionsItemSelected(item);
     }
 
