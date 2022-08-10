@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ TextInputEditText edCustomDiceSide;
 MaterialButton btAdd,btRollOnce,btRollTwice;
 TextView tvRollOneText,tvRollTwoText;
 ArrayList<String> arrListViewArray;
+ListView lvSavedList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ ArrayList<String> arrListViewArray;
         btRollTwice = findViewById(R.id.btRollTwice);
         tvRollOneText = findViewById(R.id.tvRollOneText);
         tvRollTwoText = findViewById(R.id.tvRollTwoText);
+        lvSavedList= findViewById(R.id.lvSavedList);
         SharedPrefManager.init(MainActivity.this);
         setSpinnerData(arrChooseDiceSide);
         arrListViewArray = new ArrayList<>();
@@ -108,9 +111,9 @@ getDataFromSharedPref();
             Type type = new TypeToken<List<String>>() {
             }.getType();
             List<String> arrPackageData = gson.fromJson(json, type);
-            for (String data : arrPackageData) {
+            ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrPackageData);
+            lvSavedList.setAdapter(mHistory);
 
-            }
         }
     }
 }
