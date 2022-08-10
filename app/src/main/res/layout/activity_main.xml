@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+   android:id="@+id/lvMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -13,11 +14,38 @@
         android:layout_weight="1"
         android:weightSum="2"
         android:orientation="vertical">
-
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="@string/dice_one"
+                    style="@style/stTextViewLabel"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="@string/dice_two"
+                    style="@style/stTextViewLabel"></TextView>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
             android:orientation="horizontal"
             android:weightSum="1">
             <TextView
@@ -26,7 +54,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 style="@style/stTextViewLabel"></TextView>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#FF0000FF" />
             <TextView
                 android:id="@+id/tvRollTwoText"
                 android:layout_width="0dp"
@@ -35,7 +66,7 @@
                 style="@style/stTextViewLabel"></TextView>
 
         </LinearLayout>
-
+        </LinearLayout>
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
@@ -49,8 +80,6 @@
                 android:layout_weight="0.5"
                 android:layout_marginLeft="5dp"
                 />
-
-
             <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
@@ -64,7 +93,8 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_weight="0.5"
-                    android:text="Roll Once"
+                    android:text="@string/roll_once"
+                    android:textColor="@color/white"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     app:iconGravity="textStart"
@@ -77,6 +107,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="0.5"
                     android:text="Roll Twice"
+                    android:textColor="@color/white"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     app:iconGravity="textStart"
@@ -90,10 +121,11 @@
         android:layout_weight="0.5"
         android:orientation="horizontal"
         android:weightSum="1">
+        <!--MATERIAL EDITTEXT -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Enter Custom Die"
+            android:hint="Enter Custom Dice"
             android:layout_marginLeft="15dp"
             android:layout_weight="0.7"
             android:textColorHint="@color/black"
@@ -107,6 +139,7 @@
                 android:inputType="number">
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
+        <!--MATERIAL BUTTON -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btAdd"
             style="@style/Widget.MaterialComponents.Button.Icon"
@@ -114,19 +147,23 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:text="Add"
+            android:textColor="@color/white"
             android:layout_marginLeft="15dp"
-
             android:layout_marginRight="15dp"
-
             app:iconGravity="textStart"
             />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1.5"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/history_of_dice"
+            style="@style/stTextViewLabel"></TextView>
+
         <ListView
             android:id="@+id/lvSavedList"
             android:layout_width="fill_parent"
@@ -134,5 +171,4 @@
 
         </ListView>
     </LinearLayout>
-
 </LinearLayout>

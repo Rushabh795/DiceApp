@@ -38,7 +38,6 @@ public class Dice {
             this.sideUp = (int) Math.round((roundRandom * this.sides) / 10);
         }
     }
-
     // Getters or Accessors
     //
     public int getSides() {

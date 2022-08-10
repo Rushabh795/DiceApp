@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DiceApp</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="roll_once">Roll Once</string>
+    <string name="dice_one">Dice One</string>
+    <string name="dice_two">Dice Two</string>
+    <string name="history_of_dice">History of Dice:-</string>
 </resources>
