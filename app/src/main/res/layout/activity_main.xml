@@ -57,6 +57,7 @@
             android:weightSum="1">
                 <com.google.android.material.button.MaterialButton
                     style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:id="@+id/btRollOnce"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -68,6 +69,7 @@
                     />
                 <com.google.android.material.button.MaterialButton
                     style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:id="@+id/btRollTwice"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
