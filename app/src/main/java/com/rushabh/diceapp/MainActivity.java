@@ -133,7 +133,6 @@ LinearLayout lvMain;
         {
            String stNew =  "Second Dice " + stTwo ;
             arrListViewArray.add(stNew);
-
         }
         //Using Gson i am saving data
         Gson gson = new Gson();
@@ -184,15 +183,17 @@ LinearLayout lvMain;
                 int i = SharedPrefManager.getInt("NightMode",0);
                if(i == 0)
                {
+                   //Night mode on
                    lvMain.setBackgroundColor(getResources().getColor(R.color.black));
                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                    SharedPrefManager.putInt("NightMode", 1);
-                   Toast.makeText(MainActivity.this, "Night Mode On", Toast.LENGTH_LONG).show();
+                   Toast.makeText(MainActivity.this, "Night Mode On", Toast.LENGTH_SHORT).show();
                }else{
+                   //night mode off
                    lvMain.setBackgroundColor(getResources().getColor(R.color.white));
                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                    SharedPrefManager.putInt("NightMode", 0);
-                   Toast.makeText(MainActivity.this, "Night Mode Off", Toast.LENGTH_LONG).show();
+                   Toast.makeText(MainActivity.this, "Night Mode Off", Toast.LENGTH_SHORT).show();
 
                }return true;
 
